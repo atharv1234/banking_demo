@@ -1,13 +1,14 @@
-// import logo from './logo.svg';
-import './App.css';
-import BankHomePage from "./components/bankhome/BankHome";
+import DisplayCards from "./Components/DisplayCards/DisplayCards";
+import BankHomePage from "./Components/bankhome/BankHome";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <BrowserRouter>
-        <Routes>
-    <Route path="/bankHome" element={<BankHomePage/>}/>
-    </Routes>
+      <Routes>
+        <Route path="*" element={<BankHomePage />} />
+        <Route path="/displayCard" element={<DisplayCards />} />
+      </Routes>
     </BrowserRouter>
   );
 }
